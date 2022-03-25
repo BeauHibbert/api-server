@@ -1,21 +1,32 @@
 'use strict';
 
 const express = require('express');
-const foodRouter = require('../routes/food.js');
-const clothesRouter = require('../routes/clothes.js');
+// const baseballRouter = require('../routes/baseball.js');
+// const footballRouter = require('../routes/football.js');
+
+const { footballCollection } = require('../models');
+const { baseballCollection } = require('../models');
 
 const app = express();
 
-app.use(express.json());
+// app.use(express.json());
+app.delete('/football/:id', async (req, res, next) => {
 
-app.use(foodRouter);
-app.use(clothesRouter);
+  const { id } = req.params;
+  let removedFootball = await footballCollection.delete(id);
+  res.send(removedFootball);
+});
+
+app.delete('/baseballball/:id', async (req, res, next) => {
+
+  const { id } = req.params;
+  let removedBaseball = await baseballCollection.delete(id);
+  res.send(removedBaseball);
+});
+
+// app.use(baseballRouter);
+// app.use(footballRouter);
 
 module.exports = {
-  app,
-  start: (PORT) => {
-    app.listen(PORT, () => {
-      console.log('App is running on port: ', PORT);
-    });
-  },
+  app
 };

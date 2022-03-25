@@ -2,14 +2,16 @@
 
 module.exports = (sequelize, DataTypes) => {
 
-  return sequelize.define('food', {
-    calories: {
+  return sequelize.define('baseball', {
+    average: {
       type: DataTypes.INTEGER,
       allowNull: true,
     },
-    foodGroup: {
+    baseballTeam: {
       type: DataTypes.STRING,
       allowNull: true,
     },
   });
 };
+
+module.exports = baseballSchema;

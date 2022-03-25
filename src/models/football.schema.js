@@ -2,18 +2,20 @@
 
 module.exports = (sequelize, DataTypes) => {
 
-  return sequelize.define('clothes', {
-    type: {
+  return sequelize.define('football', {
+    team: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    color: {
+    wins: {
       type: DataTypes.INTEGER,
       allowNull: true,
     },
-    size: {
-      type: DataTypes.STRING,
+    losses: {
+      type: DataTypes.INTEGER,
       allowNull: true,
     },
   });
 };
+
+module.exports = footballSchema;

@@ -1,6 +1,6 @@
 'use strict';
 
-const { sequelize, ClothesModel, FoodModel } = require('./src/models');
+const { sequelize, FootballModel, BaseballModel } = require('./src/models');
 
 sequelize.sync()
   .then(() => {

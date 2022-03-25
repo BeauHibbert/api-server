@@ -14,48 +14,48 @@ afterAll(async () => {
   await sequelize.drop();
 });
 
-describe('Testing REST API requests to food routes', () => {
+describe('Testing REST API requests to baseball routes', () => {
 
-  test('Should create a food record', async () => {
+  test('Should create a baseball record', async () => {
 
-    let response = await request.post('/food').send({
+    let response = await request.post('/baseball').send({
       calories: 150,
-      foodGroup: 'vegetables',
+      baseballTeam: 'vegetables',
     });
 
     expect(response.status).toEqual(200);
     expect(response.body.calories).toEqual(150);
-    expect(response.body.foodGroup).toEqual('vegetables');
+    expect(response.body.baseballTeam).toEqual('vegetables');
   });
 
-  test('Should read all food records', async () => {
+  test('Should read all baseball records', async () => {
 
-    let response = await request.get('/food');
+    let response = await request.get('/baseball');
 
     expect(response.status).toEqual(200);
   });
 
-  // test('Should read an individual food record', async () => {
+  // test('Should read an individual baseball record', async () => {
 
-  //   let response = await request.get('/food/:id').send({
+  //   let response = await request.get('/baseball/:id').send({
   //     id: 'xyz',
   //   });
 
   //   expect(response.status).toEqual(200);
   // });
 
-  // test('Should update an individual food record', async () => {
+  // test('Should update an individual baseball record', async () => {
 
-  //   let response = await request.put('/food/:id').send({
+  //   let response = await request.put('/baseball/:id').send({
   //     id: 'xyz',
   //   });
 
   //   expect(response.status).toEqual(200);
   // });
 
-  // test('Should destroy an individual food record', async () => {
+  // test('Should destroy an individual baseball record', async () => {
 
-  //   let response = await request.destroy('/food/:id').send({
+  //   let response = await request.destroy('/baseball/:id').send({
   //     id: 'xyz',
   //   });
 
