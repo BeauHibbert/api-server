@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = (sequelize, DataTypes) => {
+const footballSchema = (sequelize, DataTypes) => {
 
   return sequelize.define('football', {
     team: {
@@ -17,4 +17,6 @@ module.exports = (sequelize, DataTypes) => {
     },
   });
 };
+
+module.exports = footballSchema;
 
