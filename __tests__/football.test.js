@@ -14,11 +14,11 @@ afterAll(async () => {
   await sequelize.drop();
 });
 
-describe('Testing REST API requests to clothes routes', () => {
+describe('Testing REST API requests to football routes', () => {
 
-  // test('Should create a clothes record', async () => {
+  // test('Should create a football record', async () => {
 
-  //   let response = await request.post('/food').send({
+  //   let response = await request.post('/baseball').send({
   //     type: 'pants',
   //     color: 'blue',
   //     size: 1,
@@ -30,34 +30,34 @@ describe('Testing REST API requests to clothes routes', () => {
   //   expect(response.body.size).toEqual(1);
   // });
 
-  // test('Should read all clothes records', async () => {
+  // test('Should read all football records', async () => {
 
-  //   let response = await request.get('/clothes');
+  //   let response = await request.get('/football');
 
   //   expect(response.status).toEqual(200);
   // });
 
-  // test('Should read an individual clothes record', async () => {
+  // test('Should read an individual football record', async () => {
 
-  //   let response = await request.get('/clothes/:id').send({
+  //   let response = await request.get('/football/:id').send({
   //     id: 'xyz',
   //   });
 
   //   expect(response.status).toEqual(200);
   // });
 
-  // test('Should update an individual clothes record', async () => {
+  // test('Should update an individual football record', async () => {
 
-  //   let response = await request.put('/clothes/:id').send({
+  //   let response = await request.put('/football/:id').send({
   //     id: 'xyz',
   //   });
 
   //   expect(response.status).toEqual(200);
   // });
 
-  // test('Should destroy an individual clothes record', async () => {
+  // test('Should destroy an individual football record', async () => {
 
-  //   let response = await request.destroy('/clothes/:id').send({
+  //   let response = await request.destroy('/football/:id').send({
   //     id: 'xyz',
   //   });
 
