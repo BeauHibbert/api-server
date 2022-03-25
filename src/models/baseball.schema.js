@@ -14,4 +14,4 @@ module.exports = (sequelize, DataTypes) => {
   });
 };
 
-module.exports = baseballSchema;
+// module.exports = baseballSchema;

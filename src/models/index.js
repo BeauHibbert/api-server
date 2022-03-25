@@ -3,19 +3,7 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const footballSchema = require('./football.schema.js');
 const baseballSchema = require('./baseball.schema.js');
-
-// const DATABASE_URL = process.env.NODE_ENV === 'test'
-//   ? 'sqlite::memory'
-//   : process.env.DATABASE_URL || 'postgresql://localhost:5432/database_development';
-
-// const sequelize = new Sequelize(DATABASE_URL, {
-//   dialectOptions: {
-//     ssl: {
-//       require: true,
-//       rejectUnauthorized: false,
-//     },
-//   },
-// });
+const iModel = require('./lib/iModel')
 
 const sequelize = new Sequelize('sqlite::memory');
 
