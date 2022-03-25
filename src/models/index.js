@@ -1,9 +1,9 @@
 'use strict';
 
 const { Sequelize, DataTypes } = require('sequelize');
+const iModel = require('./lib/iModel.js');
 const footballSchema = require('./football.schema.js');
 const baseballSchema = require('./baseball.schema.js');
-const iModel = require('./lib/iModel')
 
 const sequelize = new Sequelize('sqlite::memory');
 

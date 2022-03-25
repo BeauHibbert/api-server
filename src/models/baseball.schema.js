@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = (sequelize, DataTypes) => {
+const baseballSchema = (sequelize, DataTypes) => {
 
   return sequelize.define('baseball', {
     average: {
@@ -14,4 +14,4 @@ module.exports = (sequelize, DataTypes) => {
   });
 };
 
-// module.exports = baseballSchema;
+module.exports = baseballSchema;

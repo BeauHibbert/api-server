@@ -5,12 +5,12 @@ class iModel {
     this.model = model;
   }
 
-  async create (json) {
+  async create(json) {
     try {
       let instance = await this.model.create(json);
-        return instance;
+      return instance;
     } catch (err) {
-        console.error(err)
+        console.error(err);
         return err;
     }
   }

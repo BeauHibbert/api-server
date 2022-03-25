@@ -9,7 +9,6 @@ const { baseballCollection } = require('../models');
 
 const app = express();
 
-// app.use(express.json());
 app.delete('/football/:id', async (req, res, next) => {
 
   const { id } = req.params;
@@ -17,13 +16,14 @@ app.delete('/football/:id', async (req, res, next) => {
   res.send(removedFootball);
 });
 
-app.delete('/baseballball/:id', async (req, res, next) => {
+app.delete('/baseball/:id', async (req, res, next) => {
 
   const { id } = req.params;
   let removedBaseball = await baseballCollection.delete(id);
   res.send(removedBaseball);
 });
 
+// app.use(express.json());
 // app.use(baseballRouter);
 // app.use(footballRouter);
 
